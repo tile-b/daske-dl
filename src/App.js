@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import NavBar from './ui-elements/Navbar';
+import '../src/css/app.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+<>
+<NavBar />
+<div style={{display:'flex',justifyContent:'center',marginTop: '100px',fontWeight: 'bold', color: 'black'}}>U IZRADNJI</div>
+<div style={{display: 'flex', justifyContent: 'center'}}><div class="loader"></div></div>
+
+
+</>
   );
 }
 
