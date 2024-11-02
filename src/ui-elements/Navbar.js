@@ -12,7 +12,7 @@ import Sidebar from './Sidebar';
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: '#996f2f8c' }}>
+      <AppBar position="static" sx={{ backgroundColor: '#bc9c74' }}>
         <Toolbar
           sx={{
             minHeight: { xs: 72, sm: 120 },
@@ -27,7 +27,7 @@ export default function ButtonAppBar() {
             aria-label="menu"
             sx={{ mr: 2, ':hover': { backgroundColor: 'transparent' } }}
           >
-            <img src={logo} alt="logo" style={{ minHeight: '60px', height: '6vw' }} />
+            <img src={logo} alt="logo" style={{ minHeight: '100px', height: '6vw' }} />
           </IconButton>
           <Box sx={{ flexGrow: 1 }} /> {/* Filler to push icons to the right */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}> {/* Flex container for icons */}
@@ -38,7 +38,7 @@ export default function ButtonAppBar() {
               sx={{ p: 0, mr: 1.5 }} 
             >
               <Badge badgeContent={1} color="primary"> {/* Add Badge here */}
-                <ShoppingCartIcon sx={{ fontSize: '20px' }} />
+                <ShoppingCartIcon sx={{ fontSize: '25px' }} />
               </Badge>
             </IconButton>
             <IconButton
@@ -47,6 +47,7 @@ export default function ButtonAppBar() {
               color="inherit"
               aria-label="menu"
               sx={{ p: 0 }} // Remove padding
+              
             >
               <Sidebar />
             </IconButton>

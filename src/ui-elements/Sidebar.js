@@ -13,6 +13,12 @@ import serv from '../images/servirana.jpg';
 import satMenu from '../images/satOne.jpg';
 import { Divider, Grid } from '@mui/material';
 import Slide from '@mui/material/Slide';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { SiViber } from 'react-icons/si';
+import PhoneIcon from '@mui/icons-material/Phone';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 
 const CustomDrawerTransition = React.forwardRef(function Transition(props, ref) {
   return <Slide ref={ref} {...props} direction="down" timeout={800} />;
@@ -41,7 +47,7 @@ export default function Sidebar() {
     >
       <Grid container spacing={2} justifyContent="center">
         <Grid item xs={12} sm={6} md={4}> {/* Adjusts for different screen sizes */}
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 600 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -50,10 +56,10 @@ export default function Sidebar() {
                 alt="Daske za Serviranje"
               />
               <CardContent sx={{ background: '#ffd0954a' }}>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Daske za Serviranje
                 </Typography>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                <Typography variant="body2" sx={{ fontSize: '12px',color: 'text.secondary' }}>
                   Ručno rađene daske visokog kvaliteta,
                   izrađene od drveta po želji, pružaju jedinstvenu estetiku i dugotrajnost. Idealne su za serviranje hrane ili kao dekoracija u vašem domu.
                 </Typography>
@@ -62,7 +68,7 @@ export default function Sidebar() {
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}> {/* Adjusts for different screen sizes */}
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 600 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -71,10 +77,10 @@ export default function Sidebar() {
                 alt="Unikatni Satovi"
               />
               <CardContent sx={{ background: '#ffd0954a' }}>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Unikatni Satovi
                 </Typography>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                <Typography variant="body2" sx={{ fontSize: '12px',color: 'text.secondary' }}>
                   Ručno rađeni satovi, svaki unikatnog dizajna, donose prirodnu lepotu i toplinu u svaki prostor.
                   Izrađeni su od pažljivo odabranih vrsta drva, što im daje jedinstven karakter i dugotrajnost.
                   Pravi umetnički dodaci za vaš dom.
@@ -84,18 +90,53 @@ export default function Sidebar() {
           </Card>
         </Grid>
       </Grid>
-      <Divider sx={{ my: 2 }} />
+      <Divider sx={{ mt: 4,mb: 1, width: '100%',borderWidth: '1px' }} />
+      {/* socials  #983647*/}
+
+  <Box
+    sx={{
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between', // Space between phone icon and social icons
+      pr: 1, // Padding on the right
+    }}
+  >
+<IconButton onClick={() => window.open('tel:+381637856855')}>
+      <PhoneIcon sx={{ color: '#844747', fontSize: '40px' }} />
+    </IconButton>
+
+    <Box
+      sx={{
+        display: 'flex',
+        gap: 0.5, // Space between social icons
+      }}
+    >
+<IconButton onClick={() => window.open('https://www.instagram.com/daske_dl/', '_blank')}>
+      <InstagramIcon sx={{ color: '#844747e0', fontSize: '40px' }} />
+    </IconButton>
+    <IconButton onClick={() => window.open('https://wa.me/+381637856855', '_blank')}>
+      <WhatsAppIcon sx={{ color: '#844747e0', fontSize: '40px' }} />
+    </IconButton>
+    <IconButton onClick={() => window.open('viber://chat?number=+381637856855')}>
+      <SiViber style={{ color: '#844747e0', fontSize: '40px' }} />
+    </IconButton>
+    </Box>
+  </Box>
+  <Divider sx={{ mt: 1,mb: 2, width: '100%',borderWidth: '1px' }} />
+
       <IconButton onClick={toggleDrawer(false)} sx={{ color: 'text.primary' }}>
-        <ExpandLessIcon /> {/* Upward arrow icon to close the drawer */}
+        <ExpandLessIcon  sx={{fontSize: '30px', color: '#844747'}}/> {/* Upward arrow icon to close the drawer */}
       </IconButton>
     </Box>
   );
 
   return (
     <div>
-      <IconButton onClick={toggleDrawer(true)}>
-        <MenuIcon sx={{ color: 'white' }} /> {/* Set the color to white */}
-      </IconButton>
+      <Box display="flex" flexDirection="column" alignItems="center" onClick={toggleDrawer(true)} sx={{mx: '10px'}}>
+      <MenuIcon sx={{fontSize: '30px'}}/>
+      <KeyboardArrowDownIcon sx={{ mt: -1.7 }} /> {/* Adjust margin to move closer */}
+    </Box>
       <Drawer
         anchor="top" // Only use top anchor
         open={state.top}
