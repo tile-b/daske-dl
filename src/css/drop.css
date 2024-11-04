@@ -1,4 +1,18 @@
 /* From Uiverse.io by vamsidevendrakumar */ 
+p{
+  color: #615049;
+}
+p:hover{
+  color: #814d0d;
+  cursor: pointer;
+}
+h3{
+  color: #393734
+}
+h3:hover{
+  color: #814d0d;
+  cursor: pointer;
+}
 .cardF {
     width: 400px;
     height: 250px;
@@ -9,6 +23,8 @@
   .smanjiSlova{
     margin-left: 2.5vw;
     font-size: medium;
+    font-family: 'Noto Sans Ethiopic', sans-serif;
+  
 }
 
   @media only screen and (max-width: 1400px){
@@ -55,7 +71,7 @@ height: 130px;
   }
   
   .cardF-front {
-    background-color: #6A2C70;
+    background-color: none;
     color: #fff;
     display: flex;
     align-items: center;
@@ -66,7 +82,7 @@ height: 130px;
   }
   
   .cardF-back {
-    background-color: #F08A5D;
+    background-color: none;
     color: #fff;
     display: flex;
     align-items: center;
@@ -80,6 +96,10 @@ height: 130px;
     width: 100%;        /* Make the image take the full width */
     height: 100%;       /* Make the image take the full height */
     object-fit: cover;  /* Cover the area while maintaining aspect ratio */
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sub {
+  color: '#615049'
 }

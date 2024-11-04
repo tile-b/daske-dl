@@ -8,6 +8,7 @@ import serv from '../images/servirana.jpg'
 import sat from '../images/satOne.jpg'
 
 import '../css/drop.css'
+import { Divider } from '@mui/material';
 
 
 const CustomDrawerTransition = React.forwardRef(function Transition(props, ref) {
@@ -16,7 +17,7 @@ const CustomDrawerTransition = React.forwardRef(function Transition(props, ref) 
 
 export default function Dropdown() {
   const [state, setState] = React.useState({
-    top: false,
+    top: true,
   });
 
   const toggleDrawer = (open) => (event) => {
@@ -42,9 +43,9 @@ export default function Dropdown() {
     pb: '40px',
   }}
   role="presentation"
-  onClick={toggleDrawer(false)}
-  onKeyDown={toggleDrawer(false)}
-  onMouseLeave={toggleDrawer(false)}
+  onClick={toggleDrawer(true)}
+  onKeyDown={toggleDrawer(true)}
+  onMouseLeave={toggleDrawer(true)}
 >
   {/* Wrapper Box for arranging cards with space between */}
   <Box
@@ -68,11 +69,14 @@ export default function Dropdown() {
       </div>
     </div><div className='smanjiSlova'>
     <h3>Rucno radjene Daske</h3>
+    <Divider sx={{ mt: 1,mb: 1, width: '50%',borderWidth: '1.5px' }} />
     <p>Okrugle daske</p>
     <p>Pravougaone daske</p>
     <p>Apstraktne Daske</p>
     </div>
     </div>
+
+    <div><Divider sx={{ mt: 1,mb: 1, height: '100%',borderWidth: '1.5px' }} /></div>
 
     <div style={{display: 'flex', flexDirection: 'row'}}>
     <div className="cardF">
@@ -87,6 +91,7 @@ export default function Dropdown() {
     </div>
     <div className='smanjiSlova'>
     <h3>Rucno radjeni Satovi</h3>
+    <Divider sx={{ mt: 1,mb: 1, width: '50%',borderWidth: '1.5px' }} />
     <p>Hexagoni satovi</p>
     <p>Unikatni/Apstraktni Satovi</p>
     <p>Klasicni(krug/kocka) Satovi</p>
@@ -105,15 +110,15 @@ export default function Dropdown() {
             display: { xs: 'none', sm: 'none' , md: 'block' }
           }}
           >
-      <button onMouseEnter={toggleDrawer(false)}>Početna</button>
+      <button onMouseEnter={toggleDrawer(true)}>Početna</button>
       <button onMouseEnter={toggleDrawer(true)}>Proizvodi</button>
-      <button onMouseEnter={toggleDrawer(false)}>Kontakt</button>
+      <button onMouseEnter={toggleDrawer(true)}>Kontakt</button>
 
 </Stack>
       <Drawer
   anchor="top"
   open={state.top}
-  onClose={toggleDrawer(false)}
+  onClose={toggleDrawer(true)}
   TransitionComponent={CustomDrawerTransition}
   ModalProps={{
     BackdropProps: { invisible: true } // Disable backdrop dimming
