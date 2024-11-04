@@ -7,7 +7,6 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge'; // Import Badge component
 import logo from '../images/daske.png';
 import Sidebar from './Sidebar';
-import Button from '@mui/material/Button';
 import '../css/underline.css'
 import Dropdown from './Dropdown'
 
