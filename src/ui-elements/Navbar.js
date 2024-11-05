@@ -20,8 +20,8 @@ export default function Navbar() {
   position="fixed" 
   sx={{ 
     backgroundColor: '#bc9c74', 
-    zIndex: (theme) => theme.zIndex.drawer + 1 // Ensure AppBar is above the drawer
-  }}
+    zIndex: 1300
+    }}
 >
 
         <Toolbar
@@ -65,9 +65,9 @@ export default function Navbar() {
               edge="end"
               color="inherit"
               aria-label="menu"
-              sx={{ p: 0, display: {md: 'none'} }} // Remove padding         
+              sx={{ p: 0, display: {md: 'none'} , zIndex: 1400}} // Remove padding         
             >
-              <Sidebar />
+              <Sidebar/>
             </IconButton>
           </Box>
         </Toolbar>

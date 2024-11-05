@@ -40,7 +40,7 @@ export default function Sidebar() {
   // Function to render the cards instead of the list
   const renderCards = () => (
     <Box
-      sx={{ width: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2, bgcolor: '#996f2f7a' }}
+      sx={{ width: 'auto', display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2, bgcolor: '#996f2f7a'}}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
@@ -137,12 +137,13 @@ export default function Sidebar() {
       <MenuIcon sx={{fontSize: '30px'}}/>
       <KeyboardArrowDownIcon sx={{ mt: -1.7 }} /> {/* Adjust margin to move closer */}
     </Box>
-      <Drawer
-        anchor="top" // Only use top anchor
-        open={state.top}
-        onClose={toggleDrawer(false)}
-        TransitionComponent={CustomDrawerTransition} // Use the custom transition
-      >
+    <Drawer
+  anchor="top"
+  open={state.top}
+  onClose={toggleDrawer(false)}
+  TransitionComponent={CustomDrawerTransition}
+  sx={{ zIndex: 1400 }} // Set a higher z-index for the sidebar
+>
         {renderCards()} {/* Use the renderCards function here */}
       </Drawer>
     </div>

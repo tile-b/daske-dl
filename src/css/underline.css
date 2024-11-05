@@ -1,5 +1,5 @@
 /* From Uiverse.io by WhiteNervosa */ 
-button {
+.buttonO {
     font-size: 18px;
     color: #e1e1e1;
     font-family: inherit;
@@ -14,18 +14,18 @@ button {
     transition-property: color;
   }
   
-  button:focus,
-  button:hover {
+.buttonO:focus,
+.buttonO:hover {
     color: #fff;
   }
   
-  button:focus:after,
-  button:hover:after {
+.buttonO:focus:after,
+.buttonO:hover:after {
     width: 100%;
     left: 0%;
   }
   
-  button:after {
+.buttonO:after {
     content: "";
     pointer-events: none;
     bottom: -2px;

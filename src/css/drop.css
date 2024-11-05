@@ -82,7 +82,7 @@ height: 130px;
   }
   
   .cardF-back {
-    background-color: none;
+    background-color: black;
     color: #fff;
     display: flex;
     align-items: center;
@@ -93,12 +93,51 @@ height: 130px;
   }
   
   .cardF-front img {
-    width: 100%;        /* Make the image take the full width */
-    height: 100%;       /* Make the image take the full height */
-    object-fit: cover;  /* Cover the area while maintaining aspect ratio */
+    width: 100%;     
+    height: 100%;      
+    object-fit: cover; 
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.cardF-back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: opacity 2s ease; /* Smooth transition */
+}
+
+.cardF-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: opacity 2s ease;
+}
+
+.cardF-back:hover img {
+  opacity: 0.7; /* Dim the image */
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.5vw;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 2.5s ease;
+  text-align: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.cardF-back:hover .hover-text {
+  opacity: 1; /* Show text on hover */
+}
+
 
 .sub {
   color: '#615049'

@@ -6,6 +6,8 @@ import Stack from '@mui/material/Stack';
 
 import serv from '../images/servirana.jpg'
 import sat from '../images/satOne.jpg'
+import satovi from '../images/satovi.png'
+import serviranja from '../images/serviranja.png'
 
 import '../css/drop.css'
 import { Divider } from '@mui/material';
@@ -17,7 +19,7 @@ const CustomDrawerTransition = React.forwardRef(function Transition(props, ref) 
 
 export default function Dropdown() {
   const [state, setState] = React.useState({
-    top: true,
+    top: false,
   });
 
   const toggleDrawer = (open) => (event) => {
@@ -43,9 +45,9 @@ export default function Dropdown() {
     pb: '40px',
   }}
   role="presentation"
-  onClick={toggleDrawer(true)}
-  onKeyDown={toggleDrawer(true)}
-  onMouseLeave={toggleDrawer(true)}
+  onClick={toggleDrawer(false)}
+  onKeyDown={toggleDrawer(false)}
+  onMouseLeave={toggleDrawer(false)}
 >
   {/* Wrapper Box for arranging cards with space between */}
   <Box
@@ -64,7 +66,8 @@ export default function Dropdown() {
           <img src={serv} alt='Daska' />
         </div>
         <div className="cardF-back">
-          <p>Back Side</p>
+        <img src={serviranja} alt='Servirano' />
+          <div class="hover-text">Pogledaj&nbsp;Galeriju</div>
         </div>
       </div>
     </div><div className='smanjiSlova'>
@@ -85,7 +88,8 @@ export default function Dropdown() {
         <img src={sat} alt='Sat' />
         </div>
         <div className="cardF-back">
-          <p>Back Side</p>
+        <img src={satovi} alt='Sat' />
+        <div class="hover-text">Pogledaj&nbsp;Galeriju</div>
         </div>
       </div>
     </div>
@@ -110,18 +114,18 @@ export default function Dropdown() {
             display: { xs: 'none', sm: 'none' , md: 'block' }
           }}
           >
-      <button onMouseEnter={toggleDrawer(true)}>Početna</button>
-      <button onMouseEnter={toggleDrawer(true)}>Proizvodi</button>
-      <button onMouseEnter={toggleDrawer(true)}>Kontakt</button>
+      <button className='buttonO' onMouseEnter={toggleDrawer(false)}>Početna</button>
+      <button className='buttonO' onMouseEnter={toggleDrawer(true)}>Proizvodi</button>
+      <button className='buttonO' onMouseEnter={toggleDrawer(false)}>Kontakt</button>
 
 </Stack>
       <Drawer
   anchor="top"
   open={state.top}
-  onClose={toggleDrawer(true)}
+  onClose={toggleDrawer(false)}
   TransitionComponent={CustomDrawerTransition}
   ModalProps={{
-    BackdropProps: { invisible: true } // Disable backdrop dimming
+    BackdropProps: { invisible: false } // Disable backdrop dimming
   }}
 >
         {renderCards()}

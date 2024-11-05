@@ -26,7 +26,7 @@ return () => {
 
 <>
 <NavBar isMobile={isMobile} />
-<div style={{display:'flex',justifyContent:'center',marginTop: '100px',fontWeight: 'bold', color: 'black'}}>U IZRADNJI</div>
+<div style={{display:'flex',justifyContent:'center',marginTop: '200px',fontWeight: 'bold', color: 'black'}}>U IZRADNJI</div>
 <div style={{display: 'flex', justifyContent: 'center',marginBottom: '100px'}}><div class="loader"></div></div>
 
 <FooterTile />
