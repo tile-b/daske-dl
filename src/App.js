@@ -1,8 +1,12 @@
 import * as React from 'react';
-import NavBar from './ui-elements/Navbar';
-import '../src/css/app.css'
-import FooterTile from './ui-elements/FooterTile';
 import { useEffect, useState } from 'react';
+
+import NavBar from './ui-elements/Navbar';
+import FooterTile from './ui-elements/FooterTile';
+import Footer from './ui-elements/Footer';
+
+import '../src/css/app.css'
+
 
 function App() {
 
@@ -26,9 +30,11 @@ return () => {
 
 <>
 <NavBar isMobile={isMobile} />
-<div style={{display:'flex',justifyContent:'center',marginTop: '200px',fontWeight: 'bold', color: 'black'}}>U IZRADNJI</div>
+<div style={{display:'flex',justifyContent:'center',marginTop: '200px',fontWeight: 'bold', color: 'black',paddingBottom: '400px'}}>U IZRADNJI</div>
 <div style={{display: 'flex', justifyContent: 'center',marginBottom: '100px'}}><div class="loader"></div></div>
 
+
+<Footer />
 <FooterTile />
 </>
   );

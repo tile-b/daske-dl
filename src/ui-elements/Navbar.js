@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge'; // Import Badge component
-import logo from '../images/daske.png';
+import logo from '../images/logo.png';
 import Sidebar from './Sidebar';
 import '../css/underline.css'
 import Dropdown from './Dropdown'
@@ -19,7 +19,7 @@ export default function Navbar() {
 <AppBar 
   position="fixed" 
   sx={{ 
-    backgroundColor: '#bc9c74', 
+    backgroundColor: '#ae744c', 
     zIndex: 1300
     }}
 >
