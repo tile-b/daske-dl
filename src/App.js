@@ -30,7 +30,7 @@ return () => {
 
 <>
 <NavBar isMobile={isMobile} />
-<div style={{display:'flex',justifyContent:'center',marginTop: '200px',fontWeight: 'bold', color: 'black',paddingBottom: '400px'}}>U IZRADNJI</div>
+<div style={{display:'flex',justifyContent:'center',marginTop: '200px',fontWeight: 'bold', color: 'black',paddingBottom: '400px'}}>( https://mega.nz/file/CQBwHByQ#KXqrB2BzOGWYzN9X04yPKrTIY4HPGyR47hMpQpeOdnM)</div>
 <div style={{display: 'flex', justifyContent: 'center',marginBottom: '100px'}}><div class="loader"></div></div>
 
 
